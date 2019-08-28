@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class AverageCorrect {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Takes in user input ints and returns average as a double
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter first number: ");
