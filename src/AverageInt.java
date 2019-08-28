@@ -14,9 +14,10 @@ public class AverageInt {
         System.out.print("Enter third (final) number: ");
         int thirdNumber = input.nextInt();
 
-        int totalNumber = firstNumber + secondNumber + thirdNumber;
+        int numberSum = firstNumber + secondNumber + thirdNumber;
+        int numberCount = 3;
 
-        int avgNumber = totalNumber / 3; // I know this isn't practical because the amount of numbers for the user to enter can change :-)
+        int avgNumber = numberSum / numberCount;
 
         System.out.println("The incorrect average is " + avgNumber);
 
