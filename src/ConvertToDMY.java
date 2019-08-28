@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class ConvertToDMY {
     public static void main(String[] args) {
-
         /*
         Uses Scanner to take in user-inputted number of days and return the
         corresponding years, months, and days.
