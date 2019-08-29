@@ -28,9 +28,9 @@ public class PhoneNumber {
         int phoneNumber = 1; // https://javarevisited.blogspot.com/2013/05/how-to-generate-random-numbers-in-java-between-range.html
 
         for (int i = 0; i < 20; i++) {
-            int areaCode1 = randomNumber.nextInt(7);
-            int areaCode2 = randomNumber.nextInt(7);
-            int areaCode3 = randomNumber.nextInt(7);
+            int areaCode1 = (int)(8 * Math.random());
+            int areaCode2 = (int)(8 * Math.random());
+            int areaCode3 = (int)(8 * Math.random());
             int prefix1 = randomNumber.nextInt(7);
             int prefix2 = randomNumber.nextInt(7);
             int prefix3 = randomNumber.nextInt(7);
