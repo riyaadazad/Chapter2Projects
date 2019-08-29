@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class AverageCorrect {
+    /*
+    Assignment: Write an application (extremely similar to the one above)
+    however, this time make sure that the mathematical operations are doing "double"
+    math instead of "int" math. To do this, only one of the numbers must be a double.
+    Note: You must still read in three int and store each of those values as an int!
+    */
     public static void main(String[] args) { // Takes in user input ints and returns average as a double
         Scanner input = new Scanner(System.in);
 

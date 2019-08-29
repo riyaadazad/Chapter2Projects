@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class ConvertToDMY {
+    /*
+    Assignment: Write an application that prompts the user to enter a total
+    number of days and calculate the number of days, months, and years that represents.
+    Assume a year has 365 days and a month has 30 days. Make sure to print units.
+    */
     public static void main(String[] args) {
         /*
         Uses Scanner to take in user-inputted number of days and return the

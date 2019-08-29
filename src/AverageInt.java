@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class AverageInt {
+    /*
+    Assignment: Write an application that prompts the user to enter in three int
+    values. Create and read three int variables from the user. Calculate their average
+    and store it in an int variable. Print out the average as an int value.
+    */
     public static void main(String[] args) { // Uses Scanner to take in user-inputted ints and returns the average
 
         Scanner input = new Scanner(System.in);
