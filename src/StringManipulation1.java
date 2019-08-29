@@ -36,35 +36,36 @@ public class StringManipulation1 {
         g. Print out the substring of your string starting with the character at position 23.
         (Remember that Strings start at position 0, so the first character in your string will be a "u".)
         */
-        System.out.println("word.substring(23) is: ");
+        System.out.println("word.substring(23) is: " + word.substring(23));
 
         /*
         h. Print out the substring of your string starting with the character in position 23 and
         ending with the character in position 33. Be careful to use the substring method correctly.
         This should print out "un County".
         */
-        System.out.println("word.substring(23, 33) is: ");
+        System.out.println("word.substring(23, 33) is: " + word.substring(23, 33));
 
         // i. Print out the location of the word "school" in your String. Use the .indexOf() Method to do this.
-        System.out.println("The location of the word \"school\" is at ");
+        System.out.println("The location of the word \"school\" is at " + word.indexOf("school"));
 
         /*
         j. Print out the location of the word "School" in your String. Use the .indexOf() Method to do this.
         Notice this answer is not the same as the last one. Do you know why not?
         */
-        System.out.println("The location of the word \"School\" is at ");
+        System.out.println("The location of the word \"School\" is at " + word.indexOf("School"));
 
         /*
         k. Convert every occurrence of the letter "o" to "x" in your String. Use the .replace() method to do this.
         Print out the resulting String.
         */
-        System.out.println("\"o\" is replaced with \"x\": ");
+        word = word.replace("o", "x");
+        System.out.println("\"o\" is replaced with \"x\": " + word);
 
         // Convert your String to upper case. Print out the resulting String.
-        System.out.println("Final Output: ");
+        System.out.println("Final Output: " + word.toUpperCase());
 
         // Print out the length of the final String using the .length() method.
-        System.out.println("Final Length: ");
+        System.out.println("Final Length: " + word.length());
 
         /*
         Did you know... You can chain some methods together. For example:
