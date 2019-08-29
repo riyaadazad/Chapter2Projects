@@ -52,6 +52,6 @@ public class StringManipulation2 { // Assignment: Create three string objects in
         System.out.println("string1 starting at the 3rd character: " + string1.substring(2));
 
         // m. Print out part of string2, starting at position 2 and going through position 10.
-        System.out.println("string2 from position 2 to 10: ");
+        System.out.println("string2 from position 2 to 10: " + string2.substring(2, 10));
     }
 }
