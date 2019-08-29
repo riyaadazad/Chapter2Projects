@@ -6,6 +6,6 @@ public class Sphere {
     Surface Area = 4(pi)(r)^2
     */
     public static void main(String[] args) {
-
+        System.out.print("Enter a radius: ");
     }
 }
