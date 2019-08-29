@@ -10,7 +10,7 @@ public class ConvertToDMY {
         /*
         Uses Scanner to take in user-inputted number of days and return the
         corresponding years, months, and days.
-         */
+        */
 
         Scanner input = new Scanner(System.in);
 
