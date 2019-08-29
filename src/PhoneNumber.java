@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class PhoneNumber {
     /*
     Assignment: Write a program that creates and prints 20 RANDOM phone numbers of the form (XXX) YYY - ZZZZ
@@ -22,9 +24,26 @@ public class PhoneNumber {
     */
     public static void main(String[] args) {
 
-        int phoneNumber = 0;
-        for (int i = 0; i < 21; i++) {
-            System.out.println(phoneNumber);
+        Random randomNumber = new Random(); // https://www.geeksforgeeks.org/generating-random-numbers-in-java/
+        int phoneNumber = 1; // https://javarevisited.blogspot.com/2013/05/how-to-generate-random-numbers-in-java-between-range.html
+
+        for (int i = 0; i < 20; i++) {
+            int areaCode1 = randomNumber.nextInt(7);
+            int areaCode2 = randomNumber.nextInt(7);
+            int areaCode3 = randomNumber.nextInt(7);
+            int prefix1 = randomNumber.nextInt(7);
+            int prefix2 = randomNumber.nextInt(7);
+            int prefix3 = randomNumber.nextInt(7);
+            int lineNumber1 = randomNumber.nextInt(10);
+            int lineNumber2 = randomNumber.nextInt(10);
+            int lineNumber3 = randomNumber.nextInt(10);
+            int lineNumber4 = randomNumber.nextInt(10);
+
+            System.out.println("Phone Number #" + phoneNumber + " is " + "(" + areaCode1 + areaCode2 + areaCode3 + ") " +
+                    prefix1 + prefix2 + prefix3 + " - " +
+                    lineNumber1 + lineNumber2 + lineNumber3 + lineNumber4);
+
+            phoneNumber++;
         }
 
     }
