@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class PhoneNumber {
     /*
@@ -28,16 +29,23 @@ public class PhoneNumber {
         int phoneNumber = 1; // https://javarevisited.blogspot.com/2013/05/how-to-generate-random-numbers-in-java-between-range.html
 
         for (int i = 0; i < 20; i++) {
-            int areaCode1 = (int)(8 * Math.random());
+            // https://stackoverflow.com/questions/363681/how-do-i-generate-random-integers-within-a-specific-range-in-java
+            int areaCode1 = ThreadLocalRandom.current().nextInt(2, 7 + 1); // Use ThreadLocalRandom to prevent numbers 0 or 1 from appearing as a random number
             int areaCode2 = (int)(8 * Math.random());
             int areaCode3 = (int)(8 * Math.random());
-            int prefix1 = randomNumber.nextInt(7);
-            int prefix2 = randomNumber.nextInt(7);
-            int prefix3 = randomNumber.nextInt(7);
-            int lineNumber1 = randomNumber.nextInt(10);
+            int prefix1 = ThreadLocalRandom.current().nextInt(2, 9 + 1);;
+            int prefix2 = randomNumber.nextInt(4);
+            int prefix3 = randomNumber.nextInt(2);
+            int lineNumber1 = randomNumber.nextInt(10); // Can only have one-digit integers from 0 to 9 in a phone number
             int lineNumber2 = randomNumber.nextInt(10);
             int lineNumber3 = randomNumber.nextInt(10);
             int lineNumber4 = randomNumber.nextInt(10);
+
+            if (prefix1 >= 7 && prefix2 >= 4 && prefix3 >= 2) {
+                prefix1 = ThreadLocalRandom.current().nextInt(2, 9 + 1);
+                prefix2 = randomNumber.nextInt(4);
+                prefix3 = randomNumber.nextInt(2);
+            }
 
             System.out.println("Phone Number #" + phoneNumber + " is " + "(" + areaCode1 + areaCode2 + areaCode3 + ") " +
                     prefix1 + prefix2 + prefix3 + " - " +
