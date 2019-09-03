@@ -33,34 +33,12 @@ public class PhoneNumber {
             int areaCode1 = ThreadLocalRandom.current().nextInt(2, 7 + 1); // Use ThreadLocalRandom to prevent numbers 0 or 1 from appearing as a random number
             int areaCode2 = (int)(8 * Math.random());
             int areaCode3 = (int)(8 * Math.random());
-            int prefix1 = ThreadLocalRandom.current().nextInt(2, 9 + 1);
-            int prefix2 = randomNumber.nextInt(10);
-            int prefix3 = randomNumber.nextInt(10);
-            int lineNumber1 = randomNumber.nextInt(10); // Can only have one-digit integers from 0 to 9 in a phone number
-            int lineNumber2 = randomNumber.nextInt(10); // Otherwise there are no restrictions on the line number
-            int lineNumber3 = randomNumber.nextInt(10);
-            int lineNumber4 = randomNumber.nextInt(10);
+            int prefix = ThreadLocalRandom.current().nextInt(2, 742 + 1);
+            int lineNumber = randomNumber.nextInt(9999); // Can only have one-digit integers from 0 to 9 in a phone number, otherwise there are no restrictions on the line number
 
-            String prefixes = "";
-            prefixes = prefixes.valueOf(prefix1);
-            prefixes = prefixes + prefixes.valueOf(prefix2);
-            prefixes = prefixes + prefixes.valueOf(prefix3);
-
-            int intPrefixes = Integer.parseInt(prefixes);
-
-            if (intPrefixes >= 782) {
-                prefix1 = ThreadLocalRandom.current().nextInt(2, 9 + 1);
-                prefix2 = randomNumber.nextInt(10);
-                prefix3 = randomNumber.nextInt(10);
-            }
-
-            System.out.println("Phone Number #" + phoneNumber + " is " + "(" + areaCode1 + areaCode2 + areaCode3 + ") " +
-                    intPrefixes + " - " +
-                    lineNumber1 + lineNumber2 + lineNumber3 + lineNumber4);
+            System.out.println("Phone Number #" + phoneNumber + " is " + "(" + areaCode1 + areaCode2 + areaCode3 + ") " + prefix + " - " + lineNumber);
 
             phoneNumber++;
-
-            System.out.println(prefixes);
         }
 
     }
