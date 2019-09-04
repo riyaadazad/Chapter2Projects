@@ -30,14 +30,11 @@ public class PhoneNumber {
 
         for (int i = 0; i < 20; i++) {
             // https://stackoverflow.com/questions/363681/how-do-i-generate-random-integers-within-a-specific-range-in-java
-            int areaCode1 = ThreadLocalRandom.current().nextInt(2, 7 + 1); // Use ThreadLocalRandom to prevent numbers 0 or 1 from appearing as a random number
-            int areaCode2 = (int)(8 * Math.random());
-            int areaCode3 = (int)(8 * Math.random());
-            int prefix = ThreadLocalRandom.current().nextInt(200, 742 + 1);
+            int areaCode = ThreadLocalRandom.current().nextInt(200, 798 + 1); // Use ThreadLocalRandom to prevent numbers 0 or 1 from appearing as a random number
+            int prefix = ThreadLocalRandom.current().nextInt(200, 741 + 1);
             int lineNumber = ThreadLocalRandom.current().nextInt(1000, 9999 + 1); // Can only have one-digit integers from 0 to 9 in a phone number, otherwise there are no restrictions on the line number
 
-            System.out.println("Phone Number #" + phoneNumber + " is " + "(" + areaCode1 + areaCode2 + areaCode3 + ") " +
-                    prefix + " - " +  lineNumber);
+            System.out.println("Phone Number #" + phoneNumber + " is " + "(" + areaCode + ") " + prefix + " - " +  lineNumber);
 
             phoneNumber++;
         }
