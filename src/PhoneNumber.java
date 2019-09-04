@@ -24,6 +24,7 @@ public class PhoneNumber {
     */
     public static void main(String[] args) {
 
+        // Below: trying to make the code easier to read by adding "Phone Number #" and then incrementing it in the for loop to match :-)
         int phoneNumber = 1; // https://javarevisited.blogspot.com/2013/05/how-to-generate-random-numbers-in-java-between-range.html
 
         for (int i = 0; i < 20; i++) {
