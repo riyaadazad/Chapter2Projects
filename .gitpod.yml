@@ -1,3 +1,4 @@
 vscode:
   extensions:
-    - vscjava.vscode-java-pack@0.8.0:e/rgc3uUFWKcrT0VEIg1wQ==
+    - vscjava.vscode-java-debug@0.21.0:2xtBRE0lp5AV4/J7Ptda+g==
+    - vscjava.vscode-java-dependency@0.5.1:Doag4kVXapWAYW+Sbnlw/A==
